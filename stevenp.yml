@@ -10,16 +10,10 @@
         - spotify
         - istat-menus
         - dropbox
-        - kaleidoscope
         - hazel
-        - sonos
-        - tower
-        - superduper
         - google-chrome
         - keepingyouawake
         - microsoft-office
-        - atom
-        - bartender
     - name: create ssh directory
       become: yes
       file:
@@ -49,16 +43,16 @@
         state=present
         create=true
       with_items:
-        - { regexp: '^roderik', line: 'roderik ALL=(ALL) NOPASSWD: ALL' }
+        - { regexp: '^stevenp', line: 'stevenp ALL=(ALL) NOPASSWD: ALL' }
 
   roles:
     - profile-all
     - profile-developer
 
   vars:
-    - computername: spectr
-    - git_user_name: Roderik van der Veer
-    - git_user_email: roderik@settlemint.io
+    - computername: KM-0875
+    - git_user_name: Steven Poelmans
+    - git_user_email: steven.poelmans@kunstmaan.be
     - php_version: 70
     - sublime_packages:
         - dest: "SideBarEnhancements"
