@@ -14,6 +14,7 @@
         - google-chrome
         - keepingyouawake
         - microsoft-office
+        - apache
     - name: create ssh directory
       become: yes
       file:
